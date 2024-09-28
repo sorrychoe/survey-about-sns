@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey on SNS Usage Among Korean University Students</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="icon" href="favicon.ico"> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Survey on SNS Usage Among Korean University Students</h1>
+        <form id="snsSurveyForm" action="/submit" method="POST">
+            
+            <div class="survey-question">
+                <label for="age">Age <span class="required">*</span></label>
+                <input type="number" id="age" name="age" min="17" max="100" required>
+            </div>
+
+            <div class="survey-question">
+                <label for="gender">Gender <span class="required">*</span></label>
+                <select id="gender" name="gender" required>
+                    <option value="">--Select--</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <div class="survey-question">
+                <label for="university">University <span class="required">*</span></label>
+                <input type="text" id="university" name="university" required>
+            </div>
+
+            <div class="survey-question">
+                <label for="year">Year of Study <span class="required">*</span></label>
+                <select id="year" name="year" required>
+                    <option value="">--Select--</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                    <option value="5+">5th Year or above</option>
+                </select>
+            </div>
+
+            <div class="survey-question">
+                <label for="snsFrequency">How often do you use SNS in a day? <span class="required">*</span></label>
+                <input type="number" id="time" name="time" min="0" max="24" step="0.5" required>
+            </div>
+
+            <div class="survey-question">
+                <label>Which SNS platforms do you use regularly? <span class="required">*</span></label>
+                <br>
+                <br>
+                <input type="checkbox" id="facebook" name="snsPlatforms" value="Facebook">
+                <text for="facebook">Facebook</text>
+                <input type="checkbox" id="instagram" name="snsPlatforms" value="Instagram">
+                <text for="instagram">Instagram</text>
+                <input type="checkbox" id="twitter" name="snsPlatforms" value="Twitter">
+                <text for="twitter">Twitter</text>
+                <input type="checkbox" id="thread" name="snsPlatforms" value="KakaoTalk">
+                <text for="kakao">Thread</text>
+                <input type="checkbox" id="linkedin" name="snsPlatforms" value="KakaoTalk">
+                <text for="kakao">Linkedin</text>
+                <input type="checkbox" id="otherSns" name="snsPlatforms" value="Other">
+                <text for="otherSns">Other</text>
+            </div>
+
+            <div class="survey-question">
+                <label for="snsPurpose">Primary purpose of using SNS <span class="required">*</span></label>
+                <select id="snsPurpose" name="snsPurpose" required>
+                    <option value="">--Select--</option>
+                    <option value="Socializing with friends">Socializing with friends</option>
+                    <option value="Networking for academic purposes">Networking for academic purposes</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="News and information">News and information</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="survey-question">
+                <label for="timeSpent">Average time spent on SNS per day (in hours) <span class="required">*</span></label>
+                <input type="number" id="timeSpent" name="timeSpent" min="1" step="1" required>
+            </div>
+
+            <div class="survey-question">
+                <label for="impact">Do you think SNS usage affects your academic performance? <span class="required">*</span></label>
+                <select id="impact" name="impact" required>
+                    <option value="">--Select--</option>
+                    <option value="Positive impact">Positive impact</option>
+                    <option value="Negative impact">Negative impact</option>
+                    <option value="No impact">No impact</option>
+                    <option value="Not sure">Not sure</option>
+                </select>
+            </div>
+
+            <div class="survey-question">
+                <label for="privacyConcern">How concerned are you about privacy on SNS? <span class="required">*</span></label>
+                <select id="privacyConcern" name="privacyConcern" required>
+                    <option value="">--Select--</option>
+                    <option value="Very concerned">Very concerned</option>
+                    <option value="Somewhat concerned">Somewhat concerned</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Not concerned">Not concerned</option>
+                </select>
+            </div>
+
+            <div class="survey-question">
+                <label for="additionalComments">Additional comments or suggestions:</label>
+                <textarea id="additionalComments" name="additionalComments" rows="4" placeholder="Enter your comments here..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Survey</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
